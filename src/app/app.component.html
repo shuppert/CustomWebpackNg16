@@ -1,0 +1,14 @@
+<div class="content" role="main">
+  <div class="card highlight-card card-small">
+    <span>{{ title }} app is running!</span>
+  </div>
+
+  <button (click)="onViewMD()">View Markdown</button>
+  <button (click)="onViewSource()">View HTML</button>
+  <button (click)="onViewTSSource()">View TS</button>
+  <div class="rich-text" [innerHTML]="readmeContent"></div>
+  <pre><code>{{ts}}</code></pre>
+  <pre><code>{{html}}</code></pre>
+</div>
+
+<router-outlet></router-outlet>
